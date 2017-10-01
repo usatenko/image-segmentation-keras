@@ -14,7 +14,7 @@ parser.add_argument("--n_classes", type=int, default = 10 )
 parser.add_argument("--input_height", type=int , default = 224 )
 parser.add_argument("--input_width", type=int , default = 224 )
 
-parser.add_argument('--validate',action='store_false')
+parser.add_argument('--validate', action='store_false', default = True )
 parser.add_argument("--val_images", type = str , default = "data/dataset1/images_prepped_test/")
 parser.add_argument("--val_annotations", type = str , default = "data/dataset1/annotations_prepped_test/")
 
@@ -32,6 +32,7 @@ train_images_path = args.train_images
 train_segs_path = args.train_annotations
 train_batch_size = args.batch_size
 n_classes = args.n_classes
+
 input_height = args.input_height
 input_width = args.input_width
 validate = args.validate
