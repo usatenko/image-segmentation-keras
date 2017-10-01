@@ -4,7 +4,7 @@ from keras import backend as K
 
 import Models , LoadBatches
 
-K.set_image_data_format("channels_first")
+# K.set_image_data_format("channels_first")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--save_weights_path", type = str  )
