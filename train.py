@@ -7,8 +7,8 @@ import Models , LoadBatches
 # K.set_image_data_format("channels_first")
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str  )
-parser.add_argument("--train_images", type = str, default= "data/dataset1/images_prepped_train/" )
+parser.add_argument("--save_weights_path", type = str, default = "model" )
+parser.add_argument("--train_images", type = str, default = "data/dataset1/images_prepped_train/" )
 parser.add_argument("--train_annotations", type = str, default = "data/dataset1/annotations_prepped_train/" )
 parser.add_argument("--n_classes", type=int, default = 10 )
 parser.add_argument("--input_height", type=int , default = 224 )
