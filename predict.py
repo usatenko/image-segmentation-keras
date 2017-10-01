@@ -7,13 +7,13 @@ import numpy as np
 import random
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str  )
-parser.add_argument("--epoch_number", type = int, default = 5 )
-parser.add_argument("--test_images", type = str , default = "")
-parser.add_argument("--output_path", type = str , default = "")
+parser.add_argument("--save_weights_path", type = str , default="model" )
+parser.add_argument("--epoch_number", type = int, default = 4 )
+parser.add_argument("--test_images", type = str , default = "data/dataset1/images_prepped_test/")
+parser.add_argument("--output_path", type = str , default = "out/")
 parser.add_argument("--input_height", type=int , default = 224  )
 parser.add_argument("--input_width", type=int , default = 224 )
-parser.add_argument("--model_name", type = str , default = "")
+parser.add_argument("--model_name", type = str , default = "vgg_segnet")
 parser.add_argument("--n_classes", type=int, default=2 )
 
 args = parser.parse_args()
