@@ -1,13 +1,16 @@
 import argparse
+
+from keras import backend as K
+
 import Models , LoadBatches
 
-
+K.set_image_data_format("channels_first")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--save_weights_path", type = str  )
 parser.add_argument("--train_images", type = str  )
 parser.add_argument("--train_annotations", type = str  )
-parser.add_argument("--n_classes", type=int )
+parser.add_argument("--n_classes", type=int, default = 10 )
 parser.add_argument("--input_height", type=int , default = 224  )
 parser.add_argument("--input_width", type=int , default = 224 )
 
@@ -20,9 +23,8 @@ parser.add_argument("--batch_size", type = int, default = 2 )
 parser.add_argument("--val_batch_size", type = int, default = 2 )
 parser.add_argument("--load_weights", type = str , default = "")
 
-parser.add_argument("--model_name", type = str , default = "")
+parser.add_argument("--model_name", type = str , default = "vgg_segnet")
 parser.add_argument("--optimizer_name", type = str , default = "adadelta")
-
 
 args = parser.parse_args()
 
