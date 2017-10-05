@@ -18,6 +18,7 @@ parser.add_argument('--validate', action='store_false', default = True )
 parser.add_argument("--val_images", type = str , default = "data/dataset1/images_prepped_test/")
 parser.add_argument("--val_annotations", type = str , default = "data/dataset1/annotations_prepped_test/")
 
+
 parser.add_argument("--epochs", type = int, default = 5 )
 parser.add_argument("--batch_size", type = int, default = 2 )
 parser.add_argument("--val_batch_size", type = int, default = 2 )
