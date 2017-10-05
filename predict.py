@@ -14,7 +14,7 @@ parser.add_argument("--output_path", type = str , default = "out/")
 parser.add_argument("--input_height", type=int , default = 224  )
 parser.add_argument("--input_width", type=int , default = 224 )
 parser.add_argument("--model_name", type = str , default = "vgg_segnet")
-parser.add_argument("--n_classes", type=int, default=2 )
+parser.add_argument("--n_classes", type=int, default=10 )
 
 args = parser.parse_args()
 
